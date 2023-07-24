@@ -26,6 +26,18 @@ int main()
 			printf("%d is odd ",n);
 		break;
 	}
+	case 2 :
+	{
+		char c;
+		printf("enter the character");
+		fflush(stdin); fflush(stdout);
+		scanf("%c",&c);
+		if (c =='a'||c =='A'||c =='e'||c =='E'||c =='u'||c =='U'||c =='o'||c =='O'||c =='i'||c =='I')
+			printf("%c is vowel",c);
+		else
+			printf("%c is consonant",c);
+		break;
+	}
 	}
 	return 0;
 }
