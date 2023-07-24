@@ -92,6 +92,25 @@ int main()
 		printf("the sum= %d",sum);
 		break;
 	}
+	case 7:
+	{
+		int x,i;
+		int sum=1;
+		printf("enter an integer");
+		fflush(stdin); fflush(stdout);
+		scanf("%d",&x);
+		if (x<0)
+			printf("you can't enter -ve values");
+		else
+		{
+			for (i=x;i>0;i--)
+			{
+				sum*=i;
+			}
+		}
+		printf("the factorial= %d",sum);
+		break;
+	}
 	}
 	return 0;
 }
