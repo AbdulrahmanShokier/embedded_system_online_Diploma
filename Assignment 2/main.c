@@ -111,6 +111,39 @@ int main()
 		printf("the factorial= %d",sum);
 		break;
 	}
+	case 8:
+	{
+		char op;
+		float first, second;
+		printf("Enter an operator (+, -, *, /): ");
+		fflush(stdin); fflush(stdout);
+		scanf("%c", &op);
+		printf("Enter two operands: ");
+        fflush(stdin); fflush(stdout);
+		scanf("%f %f", &first, &second);
+
+		switch (op) {
+		case '+':
+			printf("%f + %f = %f", first, second, first + second);
+			break;
+		case '-':
+			printf("%f - %f = %f", first, second, first - second);
+			break;
+		case '*':
+			printf("%f * %f = %f", first, second, first * second);
+			break;
+		case '/':
+			if (second==0)
+				printf("you can't divide by 0");
+			else
+				printf("%f / %f = %f", first, second, first / second);
+			break;
+		default:
+			printf("Error! operator is not correct");
+			break;
+
+		}
+	}
 	}
 	return 0;
 }
