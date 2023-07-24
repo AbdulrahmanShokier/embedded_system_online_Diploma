@@ -38,6 +38,22 @@ int main()
 			printf("%c is consonant",c);
 		break;
 	}
+	case 3 :
+	{
+		float n1,n2,n3;
+		printf("enter three numbers \n");
+		fflush(stdin); fflush(stdout);
+		scanf("%f %f %f",&n1,&n2,&n3);
+		if     (n1>n2 && n1>n3)
+			printf("%f is the largest",n1);
+		else if(n1>n2 && n1<n3)
+			printf("%f is the largest",n3);
+		else if(n1<n2 && n2>n3)
+			printf("%f is the largest",n2);
+		else if(n1<n2 && n2<n3)
+			printf("%f is the largest",n3);
+		break;
+	}
 	}
 	return 0;
 }
