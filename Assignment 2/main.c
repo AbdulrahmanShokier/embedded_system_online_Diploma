@@ -66,6 +66,32 @@ int main()
 			printf("%f is %s",x,(x>0)? "positive":"negative");
 		break;
 	}
+	case 5 :
+	{
+		char c;
+		printf("enter the character");
+		fflush(stdin); fflush(stdout);
+		scanf("%c",&c);
+		if ((c>='a' && c<='z') || (c>='A' && c<='Z'))
+			printf("%c is an alphabet",c);
+		else
+			printf("%c isn't an alphabet",c);
+		break;
+	}
+	case 6:
+	{
+		int x,i;
+		int sum=0;
+		printf("enter a +ve integer");
+		fflush(stdin); fflush(stdout);
+		scanf("%d",&x);
+		for (i=x;i>0;i--)
+		{
+			sum+=i;
+		}
+		printf("the sum= %d",sum);
+		break;
+	}
 	}
 	return 0;
 }
