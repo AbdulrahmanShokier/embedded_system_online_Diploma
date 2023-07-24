@@ -54,6 +54,18 @@ int main()
 			printf("%f is the largest",n3);
 		break;
 	}
+	case 4:
+	{
+		float x;
+		printf("enter the number");
+		fflush(stdin); fflush(stdout);
+		scanf("%f",&x);
+		if(x==0)
+			printf("you entered zero");
+		else
+			printf("%f is %s",x,(x>0)? "positive":"negative");
+		break;
+	}
 	}
 	return 0;
 }
