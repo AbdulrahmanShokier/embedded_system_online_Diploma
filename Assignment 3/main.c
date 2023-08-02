@@ -5,6 +5,7 @@
  *      Author: abdo4
  */
 #include<stdio.h>
+#include<string.h>
 int main()
 {
 	int x;
@@ -126,6 +127,83 @@ int main()
 		for(i=0;i<n;i++)
 		{
 			printf("%d  ",arr[i]);
+		}
+		break;
+	}
+	case 5:
+	{
+		int n,i,m;
+		printf("enter number of elements");
+		fflush(stdin);fflush(stdout);
+		scanf("%d",&n);
+		int arr[n];
+		for (i=0;i<n;i++)
+		{
+			printf("%d. enter the number: ",i+1);
+			fflush(stdin);fflush(stdout);
+			scanf("%d",&arr[i]);
+		}
+		printf("enter the number to be searched: ");
+		fflush(stdin);fflush(stdout);
+		scanf("%d",&m);
+		for (i=0;i<n;i++)
+		{
+			if(m==arr[i])
+			{
+				printf("number found at location: %d",i+1);
+				break;
+			}
+		}
+		break;
+	}
+	case 6:
+	{
+		int i,n=0,l;
+		char s;
+		char text[100];
+		printf("enter the string:\n");
+		fflush(stdin);fflush(stdout);
+		gets(text);
+		printf("enter the character:");
+		fflush(stdin);fflush(stdout);
+		scanf("%c",&s);
+		l=strlen(text);
+		for (i=0;i<l;i++)
+		{
+			if (text[i]==s)
+				++n;
+		}
+		printf("frequency of %c is: %d",s,n);
+		break;
+	}
+	case 7:
+	{
+		int i,n=0;
+		char name[100];
+		printf("enter name: ");
+		fflush(stdin);fflush(stdout);
+		gets(name);
+		for(i=0;i<100;i++)
+		{
+			if (name[i]=='\0')
+				break;
+			++n;
+		}
+		printf("the string length is : %d",n);
+		break;
+	}
+	case 8:
+	{
+		int i,l;
+		char name[100];
+		printf("enter name: ");
+		fflush(stdin);fflush(stdout);
+		gets(name);
+		l=strlen(name);
+		printf("            ");
+		for(i=l-1;i>=0;i--)
+		{
+			printf("%c",name[i]);
 		}
 		break;
 	}
